@@ -78,14 +78,14 @@ Kali-ini saya menggunakan 100.000 percobaan demi kepastian data
 ## 2h
 ### Bandingkan hasil simulasi dengan 2d
 Dari 100.000 percobaan didapatkan data sebagai berikut :  
-Rata-rata = 1.80435  
+Rata-rata = 1.79667  
 Median = 2  
-Varian = 1.805489  
-Standar Deviasi = 1.343685  
-Jumlah kematian > 4 = 3696  
+Varian = 1.792105  
+Standar Deviasi = 1.338695  
+Jumlah kematian > 4 = 3592  
 
 Berdasarkan jawaban 2d, seharusnya terdapat 0.03640666 * 100000 = 3640.666 ~ 3641 percobaan dengan kematian > 4  
-Terdapat selisih 55 percobaan antara simulasi dengan nilai statistik, angka tersebut sangatlah kecil dan wajar untuk didapatkan melalui simulasi
+Terdapat selisih 49 percobaan antara simulasi dengan nilai statistik, angka tersebut sangatlah kecil dan wajar untuk didapatkan melalui simulasi
 ## Foto & Output
 ![2](./image/2_foto.jpeg)
 
@@ -106,3 +106,29 @@ Nilai rata-rata dari distribusi chi-square adalah nilai kebebasannya, maka mean 
 Nilai varian dari distribusi chi-square adalah 2 * nilai kebebasannya, maka varian = 2 * 10 = 20
 ## Foto & Output
 ![3](./image/3_foto.jpeg)
+
+
+# No 4
+n = 100  
+mean = 45  
+sd = 5  
+## 4a
+### Fungsi probabilitas normal P(x1 <= x <= x2); z-score; plot data distribusi normal
+Misalkan data distribusi normal yang didapat disimpan di variabel sim  
+x1 merupakan data terbesar yang < mean(sim)  
+x2 merupakan data terkecil yang > mean(sim)  
+Dalam bahasa R : x1 = max(data(data < sim)) dan x2 = min(data(data > sim))
+
+Untuk mendapatkan P(x1 <= x <= x2), bisa dilakukan dengan mengkurangkan P(x <= x2) dengan P(x <= x1)  
+Dalam bahasa R : pnorm(x2, mean(sim), sd(sim)) - pnorm(x1, mean(sim), sd(sim))  
+Didapat bahwa probabilitas = 0.01693887  
+![4a](./image/4a.jpeg)
+## 4b
+### Histogram dengan breaks=50
+![4b](./image/4b.jpeg)
+## 4c
+### Varian
+Dalam bahasa R : var(sim)  
+Untuk kali ini didapatkan varian = 26.17234
+## Foto & Output
+![4](./image/4_foto.jpeg)
