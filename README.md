@@ -33,8 +33,10 @@ Maka nilai harapannya adalah 10 * 0.488 = 4.88
 Nilai simpangan baku / standar deviasi dari suatu distribusi binomial adalah akar dari variannya  
 Nilai varian dari distribusi binomial adalah perkalian antara jumlah percobaan, kemungkinan sukses, dan kemungkinan gagal  
 Maka nilai simpangan bakunya adalah sqrt(10 * 0.488 * (1-0.488)) = 1.580683  
-## 1f & Foto
-![1](./image/1.jpeg)
+## 1f
+![1f](./image/1f.jpeg)
+## Foto & Output
+![1](./image/1_foto.jpeg)
 
 
 # No 2
@@ -67,6 +69,8 @@ Maka nilai harapan = 1.8
 Nilai standar deviasi dari distribusi poisson adalah akar dari variannya  
 Nilai varian dari distribusi poisson adalah nilai rata-rata kejadian  
 Maka nilai standar deviasi = sqrt(1.8) = 1.341641 
+## 2f
+![2f](./image/2f.jpeg)
 ## 2g
 ### Lakukan simulasi
 Untuk melakukan simulasi distribusi poisson pada bahasa R, dapat digunakan fungsi rpois(n, lambda) dimana n menyatakan jumlah percobaan dan lambda menyatakan rata-rata kejadian  
@@ -82,8 +86,8 @@ Jumlah kematian > 4 = 3696
 
 Berdasarkan jawaban 2d, seharusnya terdapat 0.03640666 * 100000 = 3640.666 ~ 3641 percobaan dengan kematian > 4  
 Terdapat selisih 55 percobaan antara simulasi dengan nilai statistik, angka tersebut sangatlah kecil dan wajar untuk didapatkan melalui simulasi
-## 2f & Foto
-![2](./image/2.jpeg)
+## Foto & Output
+![2](./image/2_foto.jpeg)
 
 
 # No 3
@@ -94,9 +98,11 @@ df = 10
 ![image](https://user-images.githubusercontent.com/114993335/235296693-d22bb3ab-5847-494b-9d71-db8ba49f76d3.png)  
 Apabila kita masukkan nilai x=3 dan k=10, maka akan didapatkan nilai probabilitas sebesar 0.02353326  
 Dalam bahasa R : dchisq(3,10)
+## 3b
+![3b](./image/3b.jpeg)
 ## 3c
 ### Rataan dan varian
 Nilai rata-rata dari distribusi chi-square adalah nilai kebebasannya, maka mean = 10  
 Nilai varian dari distribusi chi-square adalah 2 * nilai kebebasannya, maka varian = 2 * 10 = 20
-## 3b & foto
-![3](./image/3.jpeg)
+## Foto & Output
+![3](./image/3_foto.jpeg)
