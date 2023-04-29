@@ -35,3 +35,52 @@ Nilai varian dari distribusi binomial adalah perkalian antara jumlah percobaan, 
 Maka nilai simpangan bakunya adalah sqrt(10 * 0.488 * (1-0.488)) = 1.580683  
 ## 1f & Foto
 ![1](./image/1.jpeg)
+
+
+# No 2
+Rentang waktu = 20 tahun  
+Rata-rata kejadian = 1.8
+## 2a
+### Apakah distribusi yang sesuai?
+Distribusi yang digunakan adalah distribusi poisson sebab data yang diberikan berupa rata-rata kejadian (1.8 kematian oleh kanker) dalam rentang waktu tertentu (20 tahun)  
+Adapun rumus yang dapat digunakan adalah e^(-1.8) * 1.8^k / k!
+## 2b
+### Terdapat 4 kematian yang terjadi, berapa probabilitasnya? Apakah itu tidak wajar?
+Dapat disubstitusikan nilai k=4 ke rumus yang kita miliki untuk menghasilkan hasil sebesar 0.07230173 atau sekitar 7.23%  
+Dalam bahasa R : dpois(4, 1.8)  
+Menurut saya data tersebut menunjukkan bahwa kejadian tersebut relatif tidak wajar sebab nilai probabilitas cukup rendah dan jumlah kematiannya bahkan lebih dari 2 kali rata-rata  
+## 2c
+### Berapa peluang terdapat paling banyak 4 kematian?
+Dapat disubstitusikan nilai k=0, 1, 2, 3, dan 4 ke rumus yang kita miliki kemudian nilainya kita jumlahkan dan nantinya akan didapat nilai probabilitas 0.9635933 atau sekitar 96.36%  
+Dalam bahasa R : sum(dpois(0:4, lambda=lambda))
+## 2d
+### Berapa pelurang terdapat lebih dari 4 kematian?
+Karena distribusi yang digunakan adalah distribusi poisson maka sayangnya tidak terdapat batasan atas untuk nilai k  
+Sehingga kita harus berpikir dari sisi komplemen  
+Komplemen dari pertanyaan ini adalah berapakah peluang bahwa paling banyak terdapat 4 kematian? Dari soal sebelumnya telah didapatkan nilai 0.9635933  
+Maka untuk menjawab soal ini kita kurangkan probabilitas penuh (1) dengan probabilitas komplemen (0.9635933) sehingga didapat bahwa peluangnya adalah 0.03640666 atau sekitar 3.64%
+## 2e
+### Berapakah nilai harapannya?
+Nilai harapan dari distribusi poisson adalah nilai rata rata kejadian  
+Maka nilai harapan = 1.8 
+### Berapakah standar deviasinya?
+Nilai standar deviasi dari distribusi poisson adalah akar dari variannya  
+Nilai varian dari distribusi poisson adalah nilai rata-rata kejadian  
+Maka nilai standar deviasi = sqrt(1.8) = 1.341641 
+## 2g
+### Lakukan simulasi
+Untuk melakukan simulasi distribusi poisson pada bahasa R, dapat digunakan fungsi rpois(n, lambda) dimana n menyatakan jumlah percobaan dan lambda menyatakan rata-rata kejadian  
+Kali-ini saya menggunakan 100.000 percobaan demi kepastian data
+## 2h
+### Bandingkan hasil simulasi dengan 2d
+Dari 100.000 percobaan didapatkan data sebagai berikut :  
+Rata-rata = 1.80435  
+Median = 2  
+Varian = 1.805489  
+Standar Deviasi = 1.343685  
+Jumlah kematian > 4 = 3696  
+
+Berdasarkan jawaban 2d, seharusnya terdapat 0.03640666 * 100000 = 3640.666 ~ 3641 percobaan dengan kematian > 4  
+Terdapat selisih 55 percobaan antara simulasi dengan nilai statistik, angka tersebut sangatlah kecil dan wajar untuk didapatkan melalui simulasi
+## 2f & Foto
+![2](./image/2.jpeg)
