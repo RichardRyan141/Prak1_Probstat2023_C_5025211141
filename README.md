@@ -84,3 +84,19 @@ Berdasarkan jawaban 2d, seharusnya terdapat 0.03640666 * 100000 = 3640.666 ~ 364
 Terdapat selisih 55 percobaan antara simulasi dengan nilai statistik, angka tersebut sangatlah kecil dan wajar untuk didapatkan melalui simulasi
 ## 2f & Foto
 ![2](./image/2.jpeg)
+
+
+# No 3
+x = 3  
+df = 10
+## 3a
+### Fungsi probabilitas dari distribusi chi-square
+![image](https://user-images.githubusercontent.com/114993335/235296693-d22bb3ab-5847-494b-9d71-db8ba49f76d3.png)  
+Apabila kita masukkan nilai x=3 dan k=10, maka akan didapatkan nilai probabilitas sebesar 0.02353326  
+Dalam bahasa R : dchisq(3,10)
+## 3c
+### Rataan dan varian
+Nilai rata-rata dari distribusi chi-square adalah nilai kebebasannya, maka mean = 10  
+Nilai varian dari distribusi chi-square adalah 2 * nilai kebebasannya, maka varian = 2 * 10 = 20
+## 3b & foto
+![3](./image/3.jpeg)
